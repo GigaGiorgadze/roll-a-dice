@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Roll a dice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scene">
+        <div class="cube">
+          <div class="flex items-center justify-center p-5 cube__face cube__face--front">
+              <div class="w-5 h-5 bg-white border-white rounded-full"></div>
+          </div>
+          <div class="flex flex-col justify-between p-5 cube__face cube__face--back">
+            <div class="self-end w-5 h-5 bg-white border-white rounded-full"></div>
+            <div class="w-5 h-5 bg-white border-white rounded-full"></div>
+          </div>
+          <div class="flex flex-col justify-between p-5 cube__face cube__face--right">
+            <div class="self-end w-5 h-5 bg-white border-white rounded-full"></div>
+            <div class="self-center w-5 h-5 bg-white border-white rounded-full"></div>
+            <div class="w-5 h-5 bg-white border-white rounded-full"></div>              
+          </div>
+          <div class="grid grid-cols-2 grid-rows-2 p-5 cube__face cube__face--left">
+            <div class="w-5 h-5 bg-white border-white rounded-full "></div>
+            <div class="w-5 h-5 bg-white border-white rounded-full justify-self-end"></div>
+            <div class="self-end w-5 h-5 bg-white border-white rounded-full"></div>
+            <div class="self-end w-5 h-5 bg-white border-white rounded-full justify-self-end"></div>
+          </div>
+          <div class="grid grid-cols-3 grid-rows-3 p-5 cube__face cube__face--top">
+            <div class="w-5 h-5 bg-white border-white rounded-full"></div>
+            <div class="w-5 h-5 col-start-3 bg-white border-white rounded-full justify-self-end second"></div>
+            <div class="self-center w-5 h-5 col-span-3 bg-white border-white rounded-full justify-self-center"></div>
+            <div class="self-end w-5 h-5 bg-white border-white rounded-full"></div>
+            <div class="self-end w-5 h-5 col-start-3 bg-white border-white rounded-full justify-self-end"></div>
+          </div>
+          <div class="p-5 grid grid-cols-2  cube__face cube__face--bottom">
+            <div class="w-5 h-5 bg-white border-white rounded-full"></div>
+            <div class="w-5 h-5 bg-white justify-self-end border-white rounded-full"></div>
+            <div class="w-5 h-5 bg-white self-center border-white rounded-full"></div>
+            <div class="w-5 h-5 bg-white self-center justify-self-end border-white rounded-full"></div>
+            <div class="w-5 h-5 bg-white border-white self-end rounded-full"></div>
+            <div class="w-5 h-5 bg-white border-white self-end justify-self-end rounded-full"></div>
+          </div>
+        </div>
+      </div>
+      <script src="index.js"></script>
+</body>
+</html>
