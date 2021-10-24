@@ -1,6 +1,10 @@
 * { box-sizing: border-box; }
 
-body { font-family: sans-serif; }
+body{
+  background: url('blob-scene-haikei.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 .scene {
   width: 200px;

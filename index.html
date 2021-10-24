@@ -9,10 +9,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <p>score:</p>
-  <span class="OneScore">0</span>
-  <span>-</span>
-  <span class="TwoScore">0</span>
+<main class="flex flex-col items-center justify-center w-full h-full">
+  <div class="mt-32">
+    <p>score:</p>
+    <span class="OneScore">0</span>
+    <span>-</span>
+    <span class="TwoScore">0</span>
+  </div>
     <div class="scene">
         <div class="cube">
           <div class="flex items-center justify-center p-5 cube__face cube__face--front">
@@ -40,18 +43,21 @@
             <div class="self-end w-5 h-5 bg-white border-white rounded-full"></div>
             <div class="self-end w-5 h-5 col-start-3 bg-white border-white rounded-full justify-self-end"></div>
           </div>
-          <div class="p-5 grid grid-cols-2  cube__face cube__face--bottom">
+          <div class="grid grid-cols-2 p-5 cube__face cube__face--bottom">
             <div class="w-5 h-5 bg-white border-white rounded-full"></div>
-            <div class="w-5 h-5 bg-white justify-self-end border-white rounded-full"></div>
-            <div class="w-5 h-5 bg-white self-center border-white rounded-full"></div>
-            <div class="w-5 h-5 bg-white self-center justify-self-end border-white rounded-full"></div>
-            <div class="w-5 h-5 bg-white border-white self-end rounded-full"></div>
-            <div class="w-5 h-5 bg-white border-white self-end justify-self-end rounded-full"></div>
+            <div class="w-5 h-5 bg-white border-white rounded-full justify-self-end"></div>
+            <div class="self-center w-5 h-5 bg-white border-white rounded-full"></div>
+            <div class="self-center w-5 h-5 bg-white border-white rounded-full justify-self-end"></div>
+            <div class="self-end w-5 h-5 bg-white border-white rounded-full"></div>
+            <div class="self-end w-5 h-5 bg-white border-white rounded-full justify-self-end"></div>
           </div>
         </div>
       </div>
-      <button class="roll bg-red-600 text-white p-2">ROLL</button>
-      <button class="PassTurn ml-4 bg-yellow-500 hidden text-white p-2">Pass turn</button>
-      <script src="index.js"></script>
+      <div>
+        <button class="p-2 text-white bg-red-600 roll">ROLL</button>
+        <button class="hidden p-2 ml-4 text-white bg-yellow-500 PassTurn">Pass turn</button>
+      </div>
+</main>
+<script src="index.js"></script>
 </body>
 </html>
