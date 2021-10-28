@@ -1,4 +1,3 @@
-// @ts-check
 
 let SidesArray = ['front','back', 'right', 'left', 'top', 'bottom']
 const cube = document.querySelector('.cube')
@@ -6,6 +5,8 @@ const roll = document.querySelector('.roll')
 const oneScore = document.querySelector('.OneScore')
 const TwoScore = document.querySelector('.TwoScore')
 const pass = document.querySelector('.PassTurn')
+const rightCurtain = document.querySelector('.rightCurtain')
+const leftCurtain = document.querySelector('.leftCurtain')
 let player1Score = 0
 let player2Score = 0
 let player1Active = true
@@ -20,11 +21,14 @@ function CheckScore() {
             tries = 0
             oneScore.innerHTML = `${player1Score}`
             roll.innerHTML = 'ROLL'
+            rightCurtain.style.opacity = 0
+            leftCurtain.style.opacity = '70%'
         }else{
             player2Score = 0 
             tries = 0
             roll.innerHTML = 'ROLL'
-
+            rightCurtain.style.opacity = "70%"
+            leftCurtain.style.opacity = 0
             pass.classList.add('hidden')
             player1Active = true
             TwoScore.innerHTML = `${player2Score}`
@@ -122,6 +126,14 @@ roll.addEventListener('click', () => {
 })
 pass.addEventListener('click', ()=> {
     tries = 0
+    if (player1Active) {
+        rightCurtain.style.opacity = 0
+        leftCurtain.style.opacity = '70%'
+
+    }else{
+        rightCurtain.style.opacity = "70%"
+        leftCurtain.style.opacity = 0
+    }
     roll.innerHTML = 'ROLL'
     player1Active = !player1Active
     pass.classList.add('hidden')

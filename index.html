@@ -9,15 +9,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="fixed left-0 transition duration-500 opacity-0 leftCurtain"></div>
-  <div class="fixed right-0 transition duration-500 opacity-100 rightCurtain"></div>
-<main class="flex flex-col items-center justify-center w-full h-full">
-  <div class="px-20 py-5 bg-white border-blue-500 shadow-2xl mt-28">
-    <p>score:</p>
-    <span class="OneScore">0</span>
-    <span>-</span>
-    <span class="TwoScore">0</span>
+  <div class="fixed left-0 transition duration-1000 bg-gray-700 opacity-0 leftCurtain"></div>
+  <div class="fixed right-0 transition duration-1000 bg-gray-700 opacity-60 rightCurtain"></div>
+<main class="flex flex-col items-center justify-center w-full h-full pt-20">
+  <div class="absolute flex flex-col items-center self-start ml-52 left">
+    <span class="text-white">player 1 score:</span>
+    <span class="text-white text-9xl OneScore">0</span>    
   </div>
+  <div class="absolute flex flex-col items-center self-end right mr-52">
+    <span class="text-white">player 2 score</span>
+    <span class="text-white text-9xl TwoScore">0</span>
+  </div>
+
     <div class="scene">
         <div class="cube">
           <div class="flex items-center justify-center p-5 cube__face cube__face--front">
