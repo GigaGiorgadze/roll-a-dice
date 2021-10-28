@@ -16,9 +16,16 @@ function CheckScore() {
         if(player1Active){
             player1Score = 0
             player1Active = false
+            pass.classList.add('hidden')
+            tries = 0
             oneScore.innerHTML = `${player1Score}`
+            roll.innerHTML = 'ROLL'
         }else{
             player2Score = 0 
+            tries = 0
+            roll.innerHTML = 'ROLL'
+
+            pass.classList.add('hidden')
             player1Active = true
             TwoScore.innerHTML = `${player2Score}`
         }
@@ -68,8 +75,14 @@ function CheckScore() {
     }
     if(player1Score >= 100){
         alert(`player one won`)
+        player1Score = 0
+        player2Score = 0
+        player1Active = true
     }else if(player2Score >= 100){
         alert(`player two won `)
+        player1Score = 0
+        player2Score = 0
+        player1Active = false
     }
 }
 
@@ -109,6 +122,7 @@ roll.addEventListener('click', () => {
 })
 pass.addEventListener('click', ()=> {
     tries = 0
+    roll.innerHTML = 'ROLL'
     player1Active = !player1Active
     pass.classList.add('hidden')
 })

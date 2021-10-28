@@ -46,3 +46,9 @@ body{
 .cube__face--bottom { transform: rotateX(-90deg) translateZ(100px); }
 
 label { margin-right: 10px; }
+
+.leftCurtain, .rightCurtain{
+  width: calc(50vw - 100px);
+  background: rgba(0, 0, 0, 0.63);
+  height: 100vw;
+}
